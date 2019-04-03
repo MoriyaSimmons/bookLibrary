@@ -9,12 +9,14 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LibraryComponent } from './library/library.component';
+import { AddBookComponent } from './add-book/add-book.component';
 
 
 
 const appRoutes: Routes = [
   { path: 'homepage', component:HomepageComponent  },
-  {path:  'library', component:LibraryComponent}
+  {path:  'library', component:LibraryComponent},
+  {path:  'addBook', component:AddBookComponent}
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     BookEditComponent,
     HomepageComponent,
     NavBarComponent,
-    LibraryComponent
+    LibraryComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
