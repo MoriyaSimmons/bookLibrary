@@ -10,7 +10,8 @@ export class BookDetailsComponent implements OnInit {
 @Input() item: Book;
 
 @Output() edit: EventEmitter<any> = new EventEmitter();
-
+@Output() delete: EventEmitter<any> = new EventEmitter();
+  
   constructor() { }
 
   ngOnInit() {
@@ -19,5 +20,8 @@ export class BookDetailsComponent implements OnInit {
   editButton(id: number){
     this.edit.emit(id);
   }
-
+  
+ deleteButton(id: number){
+    this.delete.emit(id);
+  }
 }
