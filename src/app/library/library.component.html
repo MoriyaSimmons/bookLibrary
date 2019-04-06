@@ -8,8 +8,8 @@
 
 </div>
 <div *ngFor="let book of books" class="book-library">
-  <app-book-details class="book" [item]="book" (edit)="editEmit($event)" ></app-book-details>
+  <app-book-details *ngIf="!editMode" class="book" [item]="book" (edit)="editEmit($event)" (delete)="deleteEmit($event)" ></app-book-details>
 </div>
 
 
-<app-book-edit *ngIf="editMode" [book]="editBook" (saveBook)="saveEmit($event)"></app-book-edit>
+<app-book-edit *ngIf="editMode" [book]="editBook" (saveBook)="saveEmit($event)" (isEditMode)="editModeFunc($event)"></app-book-edit>
