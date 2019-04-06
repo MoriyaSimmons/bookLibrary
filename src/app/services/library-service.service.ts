@@ -34,7 +34,11 @@ constructor() {
 getBooks(){
   return this.books;
 }
+  
+addBook(mybook: Book) {
+  this.books.push(mybook);
 
+}
 
 saveBook(mybook: Book) {
   const itemIndex = this.books.findIndex(item => item.id === mybook.id);
