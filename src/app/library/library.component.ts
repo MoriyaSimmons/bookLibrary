@@ -34,5 +34,8 @@ ngOnInit(){
      this.editMode = !this.editMode;
 
    }
+  editModeFunc() {
+    this.editMode = !this.editMode;
+  }
 
 }
