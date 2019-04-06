@@ -37,5 +37,8 @@ ngOnInit(){
   editModeFunc() {
     this.editMode = !this.editMode;
   }
-
+ deleteEmit(item:Book){
+   this.editMode=false;
+   this.ser.deleteBook(item);
+ }
 }
